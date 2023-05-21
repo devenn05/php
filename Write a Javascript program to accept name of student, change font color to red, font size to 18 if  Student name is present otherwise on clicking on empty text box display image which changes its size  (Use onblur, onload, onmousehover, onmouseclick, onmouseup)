@@ -1,0 +1,48 @@
+) Write a Javascript program to accept name of student, change font color to red, font size to 18 if 
+Student name is present otherwise on clicking on empty text box display image which changes its size 
+(Use onblur, onload, onmousehover, onmouseclick, onmouseup) 
+Ans:
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Example</title>
+<style>
+#name {
+Font-size: 14px;
+Color: black;
+}
+</style>
+</head>
+<body>
+<input type=”text” id=”name” onblur=”changeStyle()” onmouseover=”changeSize()” 
+onmouseout=”resetSize()” onmousedown=”changeColor()” onmouseup=”resetColor()”>
+<img id=”img” src=https://via.placeholder.com/150 onload=”changeImageSize()”>
+<script>
+Function changeStyle() {
+Let name = document.getElementById(“name”).value;
+If (name) {
+Document.getElementById(“name”).style.fontSize = “18px”;
+Document.getElementById(“name”).style.color = “red”;
+} else {
+Document.getElementById(“img”).style.display = “block”;
+}
+}
+Function changeSize() {
+Document.getElementById(“name”).style.fontSize = “16px”;
+}
+Function resetSize() {
+Document.getElementById(“name”).style.fontSize = “14px”;
+}
+Function changeColor() {
+Document.getElementById(“name”).style.color = “blue”;
+}
+Function resetColor() {
+Document.getElementById(“name”).style.color = “red”;
+}
+Function changeImageSize() {
+Document.getElementById(“img”).style.width = “200px”;
+Document.getElementById(“img”).style.height = “200px”;
+}
+</script>
+</body>
+</html>
