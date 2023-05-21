@@ -1,0 +1,24 @@
+) Write PHP script to read “book.xml” file into simpleXML object. Display attributes and elements .
+( simple_xml_load_file() function )
+.
+Ans:
+<?php
+// Load the XML file into a SimpleXML object
+$xml = simplexml_load_file(“book.xml”);
+// Display the attributes and elements of the SimpleXML object
+Echo “Book attributes: <br>”;
+Echo “ISBN: “ . $xml[‘isbn’] . “<br>”;
+Echo “Publisher: “ . $xml[‘publisher’] . “<br>”;
+Echo “<br>”;
+Echo “Book elements: <br>”;
+Echo “Title: “ . $xml->title . “<br>”;
+Echo “Author: “ . $xml->author . “<br>”;
+Echo “Description: “ . $xml->description . “<br>”;
+?>
+Book.xml file
+<?xml version=”1.0”?>
+<book isbn=”978-3-16-148410-0” publisher=”Example Publisher”>
+ <title>Example Book</title>
+ <author>John Doe</author>
+ <description>This is an example book.</description>
+</book>
